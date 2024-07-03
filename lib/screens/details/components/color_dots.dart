@@ -6,9 +6,9 @@ import '../../../models/Product.dart';
 
 class ColorDots extends StatelessWidget {
   const ColorDots({
-    Key? key,
+    super.key,
     required this.product,
-  }) : super(key: key);
+  });
 
   final Product product;
 

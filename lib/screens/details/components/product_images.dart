@@ -5,13 +5,14 @@ import '../../../models/Product.dart';
 
 class ProductImages extends StatefulWidget {
   const ProductImages({
-    Key? key,
+    super.key,
     required this.product,
-  }) : super(key: key);
+  });
 
   final Product product;
 
   @override
+  // ignore: library_private_types_in_public_api
   _ProductImagesState createState() => _ProductImagesState();
 }
 

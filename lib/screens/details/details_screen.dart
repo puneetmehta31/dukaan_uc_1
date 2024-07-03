@@ -1,3 +1,4 @@
+import 'package:dukaan_uc_1/models/Cart.dart';
 import 'package:dukaan_uc_1/screens/cart/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -105,6 +106,8 @@ class DetailsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: ElevatedButton(
               onPressed: () {
+
+                demoCarts.add(Cart(product: product, numOfItem: 1));
                 Navigator.pushNamed(context, CartScreen.routeName);
               },
               child: const Text("Add To Cart"),

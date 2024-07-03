@@ -1,3 +1,4 @@
+import 'package:dukaan_uc_1/razorpaypaymentgateway/razorpayment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -66,7 +67,7 @@ class CheckoutCard extends StatelessWidget {
                       text: "Total:\n",
                       children: [
                         TextSpan(
-                          text: "\Rs 00.00",
+                          text: "\Rs 6500.00",
                           style: TextStyle(fontSize: 16, color: Colors.black),
                         ),
                       ],
@@ -75,7 +76,15 @@ class CheckoutCard extends StatelessWidget {
                 ),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // Navigate to the RazorPayment screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RazorPay(title: 'Payment ',),
+                        ),
+                      );
+                    },
                     child: const Text("Check Out"),
                   ),
                 ),
