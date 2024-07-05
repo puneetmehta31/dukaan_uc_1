@@ -4,10 +4,11 @@ import '../../../constants.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
+  // ignore: library_private_types_in_public_api
   _OtpFormState createState() => _OtpFormState();
 }
 

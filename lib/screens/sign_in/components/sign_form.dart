@@ -10,6 +10,7 @@ class SignForm extends StatefulWidget {
   const SignForm({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SignFormState createState() => _SignFormState();
 }
 
@@ -140,7 +141,8 @@ class _SignFormState extends State<SignForm> {
                   // if all are valid and email-password pair is correct, navigate to success screen
                   KeyboardUtil.hideKeyboard(context);
                   Navigator.popAndPushNamed(context, LoginSuccessScreen.routeName);
-                } else {
+                } 
+                else {
                   addError(error: "Invalid email or password");
                 }
               }
